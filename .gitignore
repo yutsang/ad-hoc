@@ -1,0 +1,23 @@
+# 這個專案的檔名與路徑帶得出客戶。repo 是 public, 所以反過來做:
+# 預設整個資料夾都不進 repo, 只有逐一白名單的檔案才推。
+# 加白名單之前一定要先確認那個檔裡沒有客戶名/實際路徑/真實單號。
+drink/*
+!drink/survey.py
+!drink/run_all.py
+
+# 來源資料與產出 —— 絕對不要 commit 上來
+data/
+parquet/
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.parquet
+inspect_report.txt
+inspect_report.json
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
