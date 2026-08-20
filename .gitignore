@@ -1,0 +1,31 @@
+# 這個專案的檔名與路徑帶得出客戶。repo 是 public, 所以反過來做:
+# 預設整個資料夾都不進 repo, 只有逐一白名單的檔案才推。
+# 加白名單之前一定要先確認那個檔裡沒有客戶名/實際路徑/真實單號。
+# 根目錄不放腳本 —— 一個專案一個資料夾。根目錄冒出 .py 幾乎都是誤複製,
+# 而且會讓人 pull 到錯的那一份還不自知。
+/*.py
+
+drink/*
+!drink/survey.py
+!drink/run_all.py
+!drink/filecheck.py
+!drink/csvtools.py
+
+# 來源資料與產出 —— 絕對不要 commit 上來
+data/
+parquet/
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.parquet
+inspect_report.txt
+inspect_report.json
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+!drink/shrink.py
+!drink/duck_shim.py
