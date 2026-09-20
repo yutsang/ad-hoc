@@ -1,0 +1,17 @@
+# 這個 repo 只是檔案傳輸管道, 不是拿來管理專案的。
+#
+#   正在做的那個專案 -> 直接放**根目錄**
+#   做完的            -> 整個資料夾收進 zzPastProject/, 不再進 repo
+#
+# repo 是 public, 而這些專案的檔名與路徑帶得出客戶, 所以反過來做:
+# **預設什麼都不推**, 只有逐一白名單的工具檔才推。加白名單之前一定要先
+# 確認那個檔裡沒有客戶名、航司代碼、實際路徑、真實單號。
+*
+!.gitignore
+
+!csvtools.py
+!duck_shim.py
+!filecheck.py
+!run_all.py
+!shrink.py
+!survey.py
